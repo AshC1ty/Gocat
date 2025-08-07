@@ -18,66 +18,17 @@ The program is designed to be used as a filter in Unix pipelines, similar to how
 
 ## Installation
 
-### Ubuntu/Debian
-
 ```bash
-# Install Go if not already installed
-sudo apt update
-sudo apt install golang-go
-
-# Clone or download the source code
-# Compile the program
-go build -o gocat main.go
-
-# Move to system PATH (optional)
-sudo mv gocat /usr/local/bin/
+chmod +x install.sh
+./install.sh
 ```
 
-### Fedora
 
-```bash
-# Install Go if not already installed
-sudo dnf install golang
-
-# Compile the program
-go build -o gocat main.go
-
-# Move to system PATH (optional)
-sudo mv gocat /usr/local/bin/
-```
-
-### Arch Linux
-
-```bash
-# Install Go if not already installed
-sudo pacman -S go
-
-# Compile the program
-go build -o gocat main.go
-
-# Move to system PATH (optional)
-sudo mv gocat /usr/local/bin/
-```
-
-## Usage
-
-The program is designed to work with pipes and redirects:
-
-```bash
-# Colorize the output of any command
-echo "Hello, World!" | gocat
-ls -la | gocat
-cat somefile.txt | gocat
-
-# View colorized file contents
-gocat < filename.txt
-```
 
 **Note:** Your terminal must support ANSI colors and 24-bit RGB for the best experience. Most modern terminals support this feature.
 
 ## Requirements
 
-- Go compiler
 - Terminal with ANSI color support
 - 24-bit RGB color support for full rainbow effect
 

@@ -19,8 +19,8 @@ func main() {
     info, _ := os.Stdout.Stat()
 
 	if info.Mode() & os.ModeCharDevice != 0 {
-		fmt.Println("This program is designed to run in a terminal that supports ANSI colors.")
-		fmt.Println("Usage: command | gocat")
+		// fmt.Println("This program is designed to run in a terminal that supports ANSI colors.")
+		// fmt.Println("Usage: command | gocat")
 	}
 
 	reader := bufio.NewReader(os.Stdin)
